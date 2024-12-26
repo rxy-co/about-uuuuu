@@ -1,0 +1,142 @@
+/* Latar belakang tetap sama */
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgb(43, 40, 40) 10%, rgba(0, 0, 0, 0.5)), 
+                linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+                url('bg3.jpg') center/cover no-repeat;
+    background-blend-mode: multiply;
+}
+
+/* Mengatur tampilan lirik berderet ke bawah */
+.lyrics-display {
+    display: flex;
+    flex-direction: column; /* Membuat lirik berderet vertikal */
+    gap: 10px; /* Spasi antar baris lirik */
+}
+
+.lyrics-display p {
+    font-size: 1.5em;
+    line-height: 1.5;
+    margin: 0;
+    white-space: nowrap; /* Pastikan setiap lirik tetap dalam satu baris */
+    opacity: 0; /* Mulai dari transparan */
+    animation: fade-in 1s forwards; /* Efek pudar */
+}
+
+/* Gaya khusus untuk baris lirik yang ditonjolkan */
+.strong-line {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffdd57;
+}
+
+/* Efek animasi fade-in */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); /* Font custom */
+
+.strong-line {
+    font-family: 'Pacifico', cursive; /* Ganti font menjadi Pacifico */
+    font-weight: bold;
+    font-size: 2rem; /* Perbesar ukuran teks */
+    color: yellow; /* Ubah warna teks menjadi kuning */
+    text-align: center; /* Opsional: tengah-kan teks */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Placeholder untuk animasi "love" */
+#loveContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Agar elemen ini tidak mengganggu interaksi pengguna */
+}
+
+/* Elemen "love" */
+.love {
+    position: absolute;
+    font-size: 2rem; /* Ukuran simbol love */
+    animation: fade-in 1s forwards; /* Efek fade-in */
+    color: pink;
+    z-index: 10;
+    opacity: 1;
+}
+
+/* Animasi fade-out */
+.love.fade-out {
+    animation: fade-out 1s forwards;
+}
+
+/* Efek animasi fade-out */
+@keyframes fade-out {
+    to {
+        opacity: 0;
+        transform: scale(0.8); /* Sedikit mengecil sebelum menghilang */
+    }
+}
+
+
+/* Placeholder untuk animasi "love" */
+#loveContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Agar elemen ini tidak mengganggu interaksi pengguna */
+    z-index: 10;
+}
+
+/* Elemen "love" */
+.love {
+    position: absolute;
+    font-size: 3rem; /* Ukuran dasar simbol love */
+    animation: fade-in 1s forwards; /* Efek fade-in */
+    color: pink;
+    z-index: 20;
+    opacity: 1;
+    transition: transform 0.5s ease; /* Efek transformasi yang lebih halus */
+}
+
+/* Variasi ukuran acak */
+.love.fade-out {
+    animation: fade-out 1s forwards;
+}
+
+/* Efek fade-out */
+@keyframes fade-out {
+    to {
+        opacity: 0;
+        transform: scale(0.5); /* Mengecil sebelum menghilang */
+    }
+}
